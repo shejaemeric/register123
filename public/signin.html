@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = './style.css'>
+    <style>
+
+
+
+body{
+    background-color: black;
+    color : whitesmoke;
+}
+
+.title_1{
+
+    color :  rgb(43, 115, 248) ;
+    margin-left: 520px;
+    text-shadow: 0px 1px rgb(43, 115, 248);
+    font-style: oblique;
+    padding-top: 30px;
+    margin-bottom: -20px;
+    
+}
+
+.title_2{
+
+  color :  rgb(43, 115, 248) ;
+  text-shadow: 0px 1px rgb(43, 115, 248);
+  font-style: oblique;
+  padding-top: 30px;
+  margin-bottom: 80px;
+  margin-top: 0px;
+  margin-left: 90px;
+}
+
+.title_4{
+
+  color :  rgb(43, 115, 248) ;
+  text-shadow: 0px 1px rgb(43, 115, 248);
+  font-style: oblique;
+  margin-top:-10px ;
+  
+}
+
+.button_1{
+
+    height: 50px;
+    width: 400px;
+    color: white;
+    vertical-align: middle;
+    background-color: rgb(43, 115, 248);
+    margin-top: 120px;
+    margin-left: 450px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    padding: 14px 40px;
+    background-image: '/public/img/button.jpg';
+    border-radius: 12px;
+    border: 2px groove  white;
+    box-shadow: 0 2px 3px 0  rgb(43, 115, 248), 0 6px 9px 0  rgb(43, 115, 248);
+  }
+
+
+.button {
+    transition-duration: 0.4s;
+  }
+
+.button_1:hover {
+    background-color: rgba(255, 255, 255, 0.979);
+    color: rgb(43, 115, 248);
+    border: 1px groove  rgb(43, 115, 248);
+    box-shadow: 0 2px 3px 0 white, 0 6px 9px 0 whitesmoke;
+  }
+
+
+
+
+  .button_3{
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    background-color: rgb(43, 115, 248);
+    cursor: pointer;
+    font-size: 16px;
+    float:right;
+    padding: 10px 24px;
+    border-radius: 12px;
+    border: 2px groove  white;
+    box-shadow: 0 2px 3px 0  rgb(43, 115, 248), 0 6px 9px 0  rgb(43, 115, 248);
+    text-align: center;
+    
+  }
+
+
+.button {
+    transition-duration: 0.4s;
+  }
+
+.button_3:hover {
+    background-color: rgba(255, 255, 255, 0.979);
+    color: rgb(43, 115, 248);
+    border: 1px groove  rgb(43, 115, 248);
+    box-shadow: 0 2px 3px 0 white, 0 6px 9px 0 whitesmoke;
+  }
+
+
+
+
+
+label{
+
+  color:  rgb(86, 144, 252);
+  font-size: 20px;
+  font-weight: 200;
+  text-shadow: 0px 1px rgb(43, 115, 248);
+  margin-left: 30px;
+
+}
+
+input{
+
+   float: right;
+   width: 260px;
+   text-shadow: 0px 1px rgb(0, 0, 0);
+   height: 22px;
+   
+}
+
+.msg{
+  float: left;
+  width: 620px;
+  background-color: rgb(58, 57, 57);
+  color: azure;
+  text-shadow: 0px 1px rgb(240, 238, 238);
+  height: 22px;
+  margin-top: 10px;
+  border-radius: 25px;
+  margin-left: 10px;
+  border: 2px groove;
+  border-color: rgb(58, 57, 57);
+  
+}
+
+.column {
+  float: left;
+  width: max-content;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  border: 2px white;
+}
+
+
+.column_2 {
+
+  width: 90%;
+  padding: 10px;
+  height: 580px;
+ 
+}
+.column_1 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 580px;
+  
+}
+
+/* Clear floats after the columns */
+.row_1:after {
+  align-content: center;
+  content: "";
+  display: table;
+  clear: both;
+  margin-left: 40px;
+}
+
+
+
+    </style>
+    <title>SIGN IN</title>
+</head>
+<body>
+    <h1 class="title_2" > ENTER YOUR CREDENTIAL </h1>
+    <br>
+    <div class="row">
+        <div class="column" style="width: 40%;">
+            
+
+            <label>Enter your email :    </label>
+
+            <input type="email" id="email"><br><br><br><br>
+
+            <label>Enter your password : </label>
+
+            <input type="password" id="pass"><br><br><br><br>
+
+        </div>
+
+    <div class="column" style="width: 60%;">
+            <button class = "button_1" onclick="getthem()"  style="margin-left: 150px; margin-top: 20px;">SIGN IN</button>
+    </div>
+
+
+    <script>
+
+      function getthem(){
+          
+          const email = document.getElementById('email');
+          const pass = document.getElementById('pass');
+          
+          
+        
+            const email_1 = email.value;
+            const pass_1 =  pass.value;
+            
+        
+            const url_1 = `./public/signin?email=${email_1}&pass=${pass_1}`
+      
+            window.open(url_1,"_self")
+          
+          };</script>
+
+
+
+</div>
+</body>
+</html>
